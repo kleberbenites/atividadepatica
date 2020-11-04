@@ -15,9 +15,10 @@ export class HomePage {
   public novoProduto = null;
   public addProduto() {
 
-    this.produtos.push({
-      nome: this.novoProduto,
-    }); this.novoProduto = '';
+    this.produtoService.produtos.push
+      ({
+        nome: this.novoProduto,
+      }); this.novoProduto = '';
   }
 
   public removeProduto(toRemove: number) {

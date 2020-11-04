@@ -11,7 +11,7 @@ export interface Produtos {
 })
 export class ProdutoService {
 
-  private produtos: Produtos[] = [{
+  public produtos: Produtos[] = [{
     nome: 'produto 1'
   },
   {
