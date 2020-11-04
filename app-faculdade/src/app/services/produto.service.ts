@@ -16,14 +16,20 @@ export class ProdutoService {
   },
   {
     nome: 'produto 2'
+  },
+  {
+    nome: 'produto 3'
+  },
+  {
+    nome: 'produto 4'
   }
   ]
 
   constructor() { }
-
-    public todosProdutos(){
-      return this.produtos;
-    }
+  public novoProduto = null;
+  public todosProdutos() {
+    return this.produtos;
+  }
 
 
 
