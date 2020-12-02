@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from 'src/app/interfaces/user'
+import { User } from 'src/app/interfaces/user'
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-signtarure',
@@ -10,17 +11,25 @@ export class SigntarurePage implements OnInit {
 
   public userRegister: User = {};
 
-  constructor() { }
+  constructor(private authService: AuthService) { }
 
   ngOnInit() {
   }
 
-  
-  registrar(){
-    console.log('registrando');
-    console.log(this.userRegister.email);
-    console.log(this.userRegister.password);
+  async registrar() {
+
+    try {
+      await this.authService.registrar(this.userRegister);
+    } catch (error) {
+      console.log("executou registro");
+    } finally {
+
+    }
+
+
   }
+
+
 
 
 }
