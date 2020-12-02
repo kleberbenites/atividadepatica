@@ -6,17 +6,19 @@
   </ion-toolbar>
 </ion-header>
 
+<!-- appdelistademercado Callof12!-->
+
 <ion-content color="primary" [fullscreen]="true">
   <div class="dados-cadastro">
       <ion-card>
        
           <ion-item lines="none">
-              <ion-label> position="stacked" type="user">Usuário</ion-label>
-              <ion-input placeholder="Insira seu usuário"></ion-input>
+              <ion-label position="stacked" type="user">Usuário</ion-label>
+              <ion-input placeholder="Insira seu usuário" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="stacked" type="password">Senha</ion-label>
-              <ion-input placeholder="Digite a senha"></ion-input>
+              <ion-input placeholder="Digite a senha" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
       </ion-card>
       <ion-card>
