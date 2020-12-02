@@ -15,10 +15,10 @@ export class HomePage {
   public novoProduto = null;
   public addProduto() {
 
-    this.produtoService.produtos.push
-      ({
-        nome: this.novoProduto,
-      }); this.novoProduto = '';
+   
+   this.produtos.push({
+      nome: this.novoProduto,
+    }); this.novoProduto = '';
   }
 
   public removeProduto(toRemove: number) {
