@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'intrucoes',
     pathMatch: 'full'
   },
   {
@@ -22,6 +22,10 @@ const routes: Routes = [
   {
     path: 'signtarure',
     loadChildren: () => import('./signtarure/signtarure.module').then( m => m.SigntarurePageModule)
+  },
+  {
+    path: 'intrucoes',
+    loadChildren: () => import('./intrucoes/intrucoes.module').then( m => m.IntrucoesPageModule)
   },
 ];
 
