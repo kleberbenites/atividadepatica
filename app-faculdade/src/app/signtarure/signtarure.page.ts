@@ -21,9 +21,9 @@ export class SigntarurePage implements OnInit {
     try {
       await this.authService.registrar(this.userRegister);
     } catch (error) {
-      console.log("executou registro");
+      console.log(error);
     } finally {
-
+      console.log('registrando conta');
     }
 
 

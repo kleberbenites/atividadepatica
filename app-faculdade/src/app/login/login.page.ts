@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {User} from 'src/app/interfaces/user'
+import {User} from 'src/app/interfaces/user';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -10,18 +11,22 @@ export class LoginPage implements OnInit {
 
   public userLogin: User = {};
 
-  constructor() { }
+  constructor(private authService : AuthService) { }
 
   ngOnInit() {
   }
 
-  login(){
-    console.log(this.userLogin.email);
-    console.log(this.userLogin.password);
-  }
+ async login(user : User){
+    try {
+      await this.authService.login(this.userLogin);
+      
 
-  registrar(){
-    console.log('registrando');
+    } catch (error) {
+      console.log(error);
+    } finally {
+      console.log('realizando login');
+    }
+   
   }
 
 }
