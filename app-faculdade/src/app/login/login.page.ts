@@ -19,10 +19,8 @@ export class LoginPage implements OnInit {
  async login(user : User){
     try {
       await this.authService.login(this.userLogin);
-      
-
     } catch (error) {
-      console.log(error);
+      console.log('realizando login');
     } finally {
       console.log('realizando login');
     }
