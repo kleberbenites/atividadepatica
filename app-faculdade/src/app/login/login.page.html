@@ -14,15 +14,15 @@
        
           <ion-item lines="none">
               <ion-label position="stacked" type="user">Usuário</ion-label>
-              <ion-input placeholder="Insira seu usuário" [(ngModel)]="userLogin.email"></ion-input>
+              <ion-input placeholder="Insira seu email" [(ngModel)]="userLogin.email"></ion-input>
           </ion-item>
           <ion-item>
               <ion-label position="stacked" type="password">Senha</ion-label>
-              <ion-input placeholder="Digite a senha" [(ngModel)]="userLogin.email"></ion-input>
+              <ion-input placeholder="Digite a senha" [(ngModel)]="userLogin.password"></ion-input>
           </ion-item>
       </ion-card>
       <ion-card>
-          <ion-button expand="block" routerLink="/home">Logar</ion-button>
+          <ion-button expand="block" routerLink="/home" (click)="login()">Logar</ion-button>
      
           <ion-button expand="block" routerLink="/signtarure">Criar Conta</ion-button>
       </ion-card>

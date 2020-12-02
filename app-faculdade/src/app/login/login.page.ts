@@ -16,7 +16,12 @@ export class LoginPage implements OnInit {
   }
 
   login(){
-    console.log(this.userLogin);
+    console.log(this.userLogin.email);
+    console.log(this.userLogin.password);
+  }
+
+  registrar(){
+    console.log('registrando');
   }
 
 }
